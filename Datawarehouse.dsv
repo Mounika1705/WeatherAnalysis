@@ -1,0 +1,122 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="db639d1d-49a4-453c-802d-88d45125e3f2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Datawarehouse</ID>
+  <Name>Datawarehouse</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>DataWarehouse</DataSourceID>
+  <Schema>
+    <xs:schema id="Datawarehouse" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Datawarehouse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="8d86bf30-d17f-4901-a0e1-c560ab5c6576">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Date_dim" msprop:design-time-name="d83f3e3b-cd8d-4d0d-8074-913d97abd86f" msprop:DbTableName="Date_dim" msprop:FriendlyName="Date_dim" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date" msprop:design-time-name="01b009ad-c5f0-4613-a788-3d828142f1ca" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Date_num" msprop:design-time-name="832cd528-b27a-4e1a-87af-f92d02cabbd3" msprop:DbColumnName="Date_num" msprop:FriendlyName="Date_num" type="xs:int" />
+                  <xs:element name="month_num" msprop:design-time-name="ee3baaf1-73b7-41bc-adaa-05268fb3a9b7" msprop:DbColumnName="month_num" msprop:FriendlyName="month_num" type="xs:int" minOccurs="0" />
+                  <xs:element name="year_num" msprop:design-time-name="c05d6a0d-2108-4799-9a48-c84e0c62a4b3" msprop:DbColumnName="year_num" msprop:FriendlyName="year_num" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactWeather" msprop:design-time-name="69bd58d5-7e2d-455f-ba10-7d2d1b426414" msprop:DbTableName="FactWeather" msprop:FriendlyName="FactWeather" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Station_x0020_id" msprop:design-time-name="3bd841cc-bcc1-42f3-a21b-0260fdbdfffd" msprop:DbColumnName="Station id" msprop:FriendlyName="Station id">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Date" msprop:design-time-name="70d36d8f-486c-46e0-a6c3-ef91401c5407" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" />
+                  <xs:element name="Country" msprop:design-time-name="1e84e02a-2db2-478d-b893-22381aca805d" msprop:DbColumnName="Country" msprop:FriendlyName="Country">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PRCP" msprop:design-time-name="f765411d-3e02-4443-9342-659defff5ccd" msprop:DbColumnName="PRCP" msprop:FriendlyName="PRCP" type="xs:float" minOccurs="0" />
+                  <xs:element name="TAVG" msprop:design-time-name="c28d7d3b-86c9-48ad-8ee6-b36262e5f3e2" msprop:DbColumnName="TAVG" msprop:FriendlyName="TAVG" type="xs:int" minOccurs="0" />
+                  <xs:element name="TMIN" msprop:design-time-name="a0705700-ff12-49f3-9fd6-65cf3ad681c5" msprop:DbColumnName="TMIN" msprop:FriendlyName="TMIN" type="xs:int" minOccurs="0" />
+                  <xs:element name="TMAX" msprop:design-time-name="af292759-3dfd-4548-b49b-55e1f331fed6" msprop:DbColumnName="TMAX" msprop:FriendlyName="TMAX" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Station" msprop:design-time-name="c8a47872-5eb8-4b2e-97ad-804f9f85c6d8" msprop:DbTableName="Station" msprop:FriendlyName="Station" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Station_x0020_id" msprop:design-time-name="7d0f8cd9-3dd1-4e32-8a18-43e6cb14edf9" msprop:DbColumnName="Station id" msprop:FriendlyName="Station id">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Station_x0020_Name" msprop:design-time-name="fa08f228-43d8-4656-9704-6a46112f9801" msprop:DbColumnName="Station Name" msprop:FriendlyName="Station Name" type="xs:string" />
+                  <xs:element name="Latitude" msprop:design-time-name="7d6d7eee-3b70-4f95-b836-7b6349a19051" msprop:DbColumnName="Latitude" msprop:FriendlyName="Latitude" type="xs:float" />
+                  <xs:element name="Longitude" msprop:design-time-name="3ecb2e04-3c52-4b30-ad8c-d0dc71ad1c4d" msprop:DbColumnName="Longitude" msprop:FriendlyName="Longitude" type="xs:float" />
+                  <xs:element name="Elevation" msprop:design-time-name="5ecd6f08-87b6-44e4-8f3c-b134b8fb1b5f" msprop:DbColumnName="Elevation" msprop:FriendlyName="Elevation" type="xs:float" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Date_dim" />
+          <xs:field xpath="Date" />
+        </xs:unique>
+        <xs:unique name="dbo_Station_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Station" />
+          <xs:field xpath="Station_x0020_id" />
+        </xs:unique>
+        <xs:keyref name="fk_dw_station_id" refer="dbo_Station_Constraint1">
+          <xs:selector xpath=".//dbo_FactWeather" />
+          <xs:field xpath="Station_x0020_id" />
+        </xs:keyref>
+        <xs:keyref name="fk_dw_date" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactWeather" />
+          <xs:field xpath="Date" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Datawarehouse xmlns="" />
+  </Schema>
+</DataSourceView>
